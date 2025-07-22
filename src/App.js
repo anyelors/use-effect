@@ -1,22 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Mensaje from './components/Mensaje';
+import TemporizadorRegresivo from './components/TemporizadorRegresivo';
+import TemporizadorRoto from './components/TemporizadorRoto';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Mensaje />
+        <div style={{ textAlign: 'center', marginTop: '50px' }}>
+          <h1>Temporizador</h1>
+          <TemporizadorRegresivo />
+          <TemporizadorRoto />
+        </div>
+
       </header>
     </div>
   );
