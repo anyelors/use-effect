@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 function TemporizadorRegresivo() {
-  const [contador, setContador] = useState(3);
+  const [contador, setContador] = useState(5);
 
   useEffect(() => {
     if (contador === 0) {
@@ -11,7 +11,7 @@ function TemporizadorRegresivo() {
 
     const id = setTimeout(() => {
       setContador(prev => prev - 1);
-      console.log('kaixo:', contador)
+      console.log('contador:', contador);
     }, 1000);
 
     return () => clearTimeout(id); // Limpieza por si se desmonta

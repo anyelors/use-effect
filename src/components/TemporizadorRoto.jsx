@@ -6,8 +6,9 @@ function TemporizadorRoto() {
   // Mala práctica: setTimeout se llama en cada render
   const id = setTimeout(() => {
     if (contador1 > 0) {
-      setContador1(contador1 - 1);
-      console.log('kaixo roto:',contador1)
+      setContador1(prev => prev - 1);
+      console.log('contador roto:', contador1);
+      console.log('contador roto id:', id);
     }
   }, 1000);
 
